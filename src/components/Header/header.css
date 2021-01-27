@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  height: 80px;
+}
+
+.header__logo {
+  background-image: url('../../images/NewsExplorer.svg');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 200px;
+  margin-left: 104px;
+
+}
+
+.header__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.header__button {
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 0.5em 1.1em;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}

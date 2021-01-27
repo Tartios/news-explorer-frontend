@@ -1,0 +1,23 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  color: #B6BCBF;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.footer__navBar {
+  display: flex;
+  justify-content: space-between;
+  align-self:center;
+  margin-right: 104px;
+  width: 416px;
+  padding: 0;
+}
+
+.footer__link {}
+
+.footer__img {}
