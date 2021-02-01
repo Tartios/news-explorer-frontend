@@ -1,8 +1,11 @@
 import React from 'react';
 import './main.css';
 import About from '../About/About';
+import NewsCardList from '../NewsCardList/NewsCardList';
+import newsCards from '../../NewsCards/newsCards';
 
 export default function Main() {
+  console.log(newsCards);
   return (
     <main>
         <section className='searchService'>
@@ -15,9 +18,8 @@ export default function Main() {
             </form>
           </div>
         </section>
-        <About/>
-        {/* <NewsCardList/>
-        <About/> */}
+        <NewsCardList cards={newsCards} />
+        <About />
     </main>
   );
 }

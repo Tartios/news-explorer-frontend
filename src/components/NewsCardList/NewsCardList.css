@@ -1,0 +1,6 @@
+.results {
+  background-color: #F5F6F7;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 400px);
+}
