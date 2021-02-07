@@ -1,6 +1,8 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import './footer.css';
+import gitIcon from '../../images/github.svg';
+import fbIcon from '../../images/fb.svg';
 
 export default function Footer() {
   return (
@@ -11,8 +13,8 @@ export default function Footer() {
           <Link className='footer__link'>Главная</Link>
         </Route>
         <a href='https://praktikum.yandex.ru/' className='footer__link'>Яндекс.Практикум</a>
-        <a className='footer__link'><img src='../../images/github.svg' className='footer__img'></img></a>
-        <a className='footer__link'><img src='../../images/fb.svg' className='footer__img'></img></a>
+        <a className='footer__link'><img src={gitIcon} className='footer__img'></img></a>
+        <a className='footer__link'><img src={fbIcon} className='footer__img'></img></a>
       </nav>
     </footer>
   );

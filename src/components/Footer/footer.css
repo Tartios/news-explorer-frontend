@@ -18,6 +18,11 @@
   padding: 0;
 }
 
-.footer__link {}
+.footer__link {
+  text-decoration: none;
+  color: #1a1b22;
+  font-size: 18px;
+  line-height: 24px;
+}
 
 .footer__img {}

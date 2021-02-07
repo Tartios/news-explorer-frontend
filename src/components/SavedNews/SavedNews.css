@@ -1,0 +1,25 @@
+.savedNews {
+  width: 712px;
+  margin: 40px auto 56px 104px;
+  text-align: start;
+}
+
+.savedNews__title {
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  opacity: .5;
+}
+
+.savedNews__info {
+  font-size: 40px;
+  line-height: 46px;
+  color: #1a1b22;
+  width: 530px;
+}
+
+.savedNews__categories-info {
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+}

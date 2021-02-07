@@ -1,31 +1,17 @@
 import React from 'react';
 import './header.css';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
 
-export default function Header() {
+export default function Header({ onSignIn }) {
   return (
-    // тут все кроме лого нужно будет унести в навигацию и перенести туда стили,
-    // и развести их по разным краям
     <header className='header'>
         <Route exact path='/'>
-            <button className='header__logo'></button>
+            <div>
+              <button className='header__logo'></button>
+            </div>
         </Route>
-        <Route>
-            <Link className='header__link'>
-            Главная
-            </Link>
-        </Route>
-        <Route>
-            <Link className='header__link'>
-            Сохранённые статьи
-            </Link>
-        </Route>
-        <Route>
-            <button className='header__button'>Авторизоваться</button>
-        </Route>
-        <Route>
-            <button className='header__button'>Имя пользователя и значок</button>
-        </Route>
+        <Navigation onSignIn={onSignIn}/>
     </header>
   );
 }

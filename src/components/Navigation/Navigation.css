@@ -1,0 +1,34 @@
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+  margin-left: 34px;
+}
+
+.nav__link_active {
+  bottom: 0;
+  border-bottom: 3px solid #fff;
+}
+.nav {
+  display: flex;
+  height: 80px;
+}
+.nav__link-name {
+  margin-top: 30px;
+  text-align: center;
+  align-content: center;
+}
+.nav__button {
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 0.5em 1.1em;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  background-color: transparent;
+  margin: auto 104px auto 32px;
+  height: 48px;
+}

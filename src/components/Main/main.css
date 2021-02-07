@@ -1,6 +1,8 @@
 .searchService {
-  height: 496px;
+  height: 576px;
+  max-width: 100%;
   background-image: url('../../images/background-main.png');
+  background-repeat: no-repeat;
 }
 
 .searchService__content {

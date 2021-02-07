@@ -1,6 +1,28 @@
 .results {
   background-color: #F5F6F7;
+  padding-top: 80px;
+}
+
+.results__title {
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  margin: 0 auto 64px 104px;
+  text-align: left;
+}
+
+.results__cards {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(3, 400px);
+  justify-content: center;
+}
+
+.results__button {
+  border: none;
+  border-radius: 100px;
+  background-color: white;
+  width: 288px;
+  height: 64px;
+  margin: 64px auto 80px;
 }

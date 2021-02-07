@@ -1,7 +1,7 @@
 import React from 'react';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
-export default function EditProfilePopup({ isOpen, onClose }) {
+export default function PopupSignIn({ isOpen, onClose }) {
   function handleSubmit(e) {
     e.preventDefault();
   // тут нужно onChange добавить к инпутам добавить стейты и функции их меняющие

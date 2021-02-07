@@ -1,7 +1,8 @@
 .card {
   width: 400px;
   height: 576px;
-  border-radius: 5%;
+  position: relative;
+  border-radius: 16%;
 }
 
 .card__image {
@@ -43,4 +44,55 @@
   line-height: 20px;
   color: #B6BCBF;
   margin: 0;
+}
+
+.card__save-button {
+  background-image: url(../../images/save-mark.svg);
+  background-size: auto;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 24px;
+  top: 24px;
+}
+
+.card__save-button:hover {
+  cursor: pointer;
+  background-image: url('../../images/save-mark-hover.svg');
+}
+
+.card__save-button_isSaved {
+  background-image: url('../../images/save-mark-saved.jpg');
+}
+
+.card__info-window {
+  background-color: #fff;
+  position: absolute;
+  border-radius: 10px;
+  width: 182px;
+  height: 40px;
+  right: 69px;
+  top: 24px;
+  font-size: 10px;
+  text-align: center;
+  display: none;
+}
+
+.card__info-window_true {
+  display: inline;
+}
+
+.card__info-window-title {
+  margin: 15px auto;
+  line-height: 1em;
+}
+
+.card__info-window-title_isTrue {
+  display: inline;
 }
