@@ -22,7 +22,6 @@ export default function PopupSignIn({ isOpen, onClose }) {
         name="email"
         type="text"
         id="email-input"
-        value={''}
         className="popup__input popup__input_name"
         placeholder='Введите почту'
         required
@@ -33,7 +32,6 @@ export default function PopupSignIn({ isOpen, onClose }) {
         name="password"
         type="text"
         id="password-input"
-        value={''}
         className="popup__input popup__input_prof"
         placeholder='Введите пароль'
         required

@@ -4,6 +4,7 @@
 }
 
 .results__title {
+  font-family: 'Roboto-Slab';
   font-size: 40px;
   line-height: 46px;
   color: #1A1B22;
@@ -19,10 +20,47 @@
 }
 
 .results__button {
+  font-size: 18px;
+  font-weight: 500;
   border: none;
   border-radius: 100px;
   background-color: white;
   width: 288px;
   height: 64px;
   margin: 64px auto 80px;
+}
+
+@media screen and (max-width: 1250px) {
+  .results {
+    padding-top: 40px;
+  }
+  .results__cards {
+    gap: 8px;
+    grid-template-columns: repeat(3, 224px);
+  }
+  .results__button {
+    width: 240px;
+    height: 56px;
+  }
+  .results__title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 708px) {
+  .results {
+    padding-top: 32px;
+  }
+  .results__cards {
+    gap: 10px;
+    grid-template-columns: repeat(1, 228px);
+  }
+  .results__button {
+    width: 288px;
+  }
+  .results__title {
+    line-height: 34px;
+    width: 288px;
+    margin: 0 auto 24px;
+  }
 }

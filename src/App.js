@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import {
+  useLocation,
+  Route,
+  Switch,
+} from 'react-router-dom';
 import Main from './components/Main/Main';
 import SavedNews from './components/SavedNews/SavedNews';
 import Header from './components/Header/Header';
@@ -10,6 +14,7 @@ import PopupSignUp from './components/PopupSignUp/PopupSignUp';
 import PopupSuccessfuly from './components/PopupSuccessfuly/PopupSuccessfuly';
 
 function App() {
+  const location = useLocation();
   const [isSignInOpen, setSignInOpen] = useState(false);
   const [isSignUpOpen, setSignUpOpen] = useState(false);
   const [isPopupSuccessfulyOpen, setPopupSuccessfulyOpen] = useState(false);
@@ -31,18 +36,19 @@ function App() {
     setSignUpOpen(false);
     setPopupSuccessfulyOpen(false);
   }
+
   return (
     <div className="App">
       <PopupSignIn isOpen={isSignInOpen} onClose={colseAllPopups} onSignUp={handleSignUpOpen} onSuccessfuly={handleSuccessfulyOpen}/>
       <PopupSignUp isOpen={isSignUpOpen} onClose={colseAllPopups} onSignIn={handleSignInOpen}/>
       <PopupSuccessfuly isOpen={isPopupSuccessfulyOpen} onClose={colseAllPopups} />
-      <Header onSignIn={handleSignInOpen}/>
+      <Header onSignIn={handleSignInOpen} location={location}/>
       <Switch>
         <Route exact path='/'>
-          <Main></Main>
+          <Main location={location}></Main>
         </Route>
         <Route path='/saved-news'>
-          <SavedNews></SavedNews>
+          <SavedNews location={location}></SavedNews>
         </Route>
       </Switch>
       <Footer/>

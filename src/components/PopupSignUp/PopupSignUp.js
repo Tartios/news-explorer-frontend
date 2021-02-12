@@ -4,7 +4,6 @@ import PopupWithForm from '../PopupWithForm/PopupWithForm';
 export default function PopupSignUp({ isOpen, onClose }) {
   function handleSubmit(e) {
     e.preventDefault();
-  // тут нужно onChange добавить к инпутам добавить стейты и функции их меняющие
   }
 
   return (
@@ -22,7 +21,6 @@ export default function PopupSignUp({ isOpen, onClose }) {
         name="email"
         type="text"
         id="email-input"
-        value={''}
         className="popup__input popup__input_name"
         placeholder='Введите почту'
         required
@@ -33,7 +31,6 @@ export default function PopupSignUp({ isOpen, onClose }) {
         name="password"
         type="text"
         id="password-input"
-        value={''}
         className="popup__input popup__input_prof"
         placeholder='Введите пароль'
         required

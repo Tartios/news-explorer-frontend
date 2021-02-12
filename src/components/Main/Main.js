@@ -4,8 +4,7 @@ import About from '../About/About';
 import NewsCardList from '../NewsCardList/NewsCardList';
 import newsCards from '../../NewsCards/newsCards';
 
-export default function Main() {
-  console.log(newsCards);
+export default function Main({ location }) {
   return (
     <main>
         <section className='searchService'>
@@ -18,7 +17,7 @@ export default function Main() {
             </form>
           </div>
         </section>
-        <NewsCardList cards={newsCards} />
+        <NewsCardList cards={newsCards} location={location} />
         <About />
     </main>
   );

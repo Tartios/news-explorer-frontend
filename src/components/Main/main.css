@@ -1,18 +1,22 @@
 .searchService {
-  height: 576px;
+  max-height: 576px;
   max-width: 100%;
   background-image: url('../../images/background-main.png');
   background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 80px;
 }
 
 .searchService__content {
-  width: 608px;
+  max-width: 608px;
   margin: 0 auto;
   padding-top: 80px;
   text-align: left;
 }
 
 .searchService__title {
+  font-family: 'Roboto-Slab';
+  font-weight: 400;
   color: #fff;
   font-size: 60px;
   line-height: 64px;
@@ -20,10 +24,11 @@
 }
 
 .searchService__text {
+  font-weight: 400;
   color: #fff;
   font-size: 18px;
   line-height: 24px;
-  width: 545px;
+  max-width: 545px;
   /* width возможно не нужно? проверить после всей верстки и импорта шрифтов */
 }
 
@@ -38,6 +43,7 @@
 }
 
 .searchForm__inputBar {
+  font-weight: 400;
   border: none;
   border-radius: 100px;
   margin-left: 24px;
@@ -48,9 +54,70 @@
 }
 
 .searchForm__button {
+  font-weight: 500;
+  color: #fff;
   border: none;
   border-radius: 100px;
   background-color: #2f71e5;
   width: 168px;
   height: 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .searchService__title {
+    font-size: 36px;
+    margin: 38px 0 0;
+  }
+  .searchService__content {
+    max-width: 452px;
+  }
+  .searchForm__inputBar {
+    width: 292px;
+    height: 52px;
+    margin-bottom: 48px;
+  }
+  .searchForm__button {
+    width: 160px;
+    height: 54px;
+  }
+  .searchForm {
+    height: 54px;
+  }
+  .searchService__text {
+    margin-bottom: 48px;
+    margin-top: 16px;
+  }
+  .searchService {
+    background-image: url('../../images/background-main-mini.png');
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .searchService__content {
+    padding-top: 56px;
+  }
+  .searchService__title {
+    margin: 30px auto 0;
+  }
+  .searchService__text {
+    margin: 16px auto 122px;
+  }
+  .searchForm {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: auto;
+  }
+  .searchForm__inputBar {
+    width: 282px;
+    border: 1px solid #d1d2d6;
+    margin: 0 auto 16px;
+  }
+  .searchForm__button {
+    width: 288px;
+    height: 56px;
+    margin: 0 auto 32px;
+  }
 }

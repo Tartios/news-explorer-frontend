@@ -1,6 +1,6 @@
 .card {
-  width: 400px;
-  height: 576px;
+  max-width: 400px;
+  max-height: 576px;
   position: relative;
   border-radius: 16%;
 }
@@ -8,7 +8,7 @@
 .card__image {
   height: 272px;
   width: 400px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card__info {
@@ -21,6 +21,7 @@
 }
 
 .card__date {
+  font-family: 'Source Sans Pro';
   font-size: 18px;
   line-height: 24px;
   color: #B6BCBF;
@@ -28,6 +29,8 @@
 }
 
 .card__title {
+  font-family: 'Roboto-Slab';
+  font-weight: 400;
   font-size: 26px;
   line-height: 30px;
   margin: 0;
@@ -37,13 +40,36 @@
   font-size: 16px;
   line-height: 22px;
   margin: 16px 0 18px;
+  max-height: 140px;
 }
 
 .card__source {
+  font-family: 'Roboto-Slab';
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #B6BCBF;
   margin: 0;
+}
+
+.card__tag {
+  background-color: #fff;
+  padding: 0 12px;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  width: auto;
+  height: 40px;
+  left: 24px;
+  top: 24px;
+  text-align: center;
+  display: inline-table;
+  font-size: 14px;
+}
+
+.card__tags {
+  align-items: center;
 }
 
 .card__save-button {
@@ -62,6 +88,10 @@
   top: 24px;
 }
 
+.card__save-button_saved {
+  background-image: url(../../images/save-mark-saved.svg);
+}
+
 .card__save-button:hover {
   cursor: pointer;
   background-image: url('../../images/save-mark-hover.svg');
@@ -69,6 +99,22 @@
 
 .card__save-button_isSaved {
   background-image: url('../../images/save-mark-saved.jpg');
+}
+
+.card__delete-button {
+  background-image: url(../../images/trash-icon.svg);
+  background-size: auto;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 24px;
+  top: 24px;
 }
 
 .card__info-window {
@@ -95,4 +141,29 @@
 
 .card__info-window-title_isTrue {
   display: inline;
+}
+
+@media screen and (max-width: 1250px) {
+  .card__image {
+    width: 224px;
+    height: 150px;
+  }
+  .card__date {
+    font-size: 18px;
+  }
+  .card__title {
+    font-size: 22px;
+  }
+  .card__save-button {
+    right: 8px;
+    top: 8px;
+  }
+  .card__delete-button {
+    right: 8px;
+    top: 8px;
+  }
+  .card__tag {
+    left: 8px;
+    top: 8px;
+  }
 }
