@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
-import './newsCardList.css';
+import './NewsCardList.css';
 import notFoundRes from '../../images/not-found-res.svg';
 // import Preloader from '../Preloader/Preloader';
 

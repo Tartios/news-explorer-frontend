@@ -1,5 +1,5 @@
 import React from 'react';
-import './navigation.css';
+import './Navigation.css';
 import { NavLink } from 'react-router-dom';
 import exit from '../../images/exit.svg';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './newsCard.css';
+import './NewsCard.css';
 
 export default function NewsCard({ card, location }) {
   const [hoverOnButton, setHoverOnButton] = React.useState(false);

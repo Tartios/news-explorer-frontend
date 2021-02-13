@@ -1,5 +1,5 @@
 import React from 'react';
-import './savedNews.css';
+import './SavedNews.css';
 import NewsCardList from '../NewsCardList/NewsCardList';
 import newsCards from '../../NewsCards/newsCards';
 
