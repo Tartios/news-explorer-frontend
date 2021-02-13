@@ -1,6 +1,7 @@
 .results {
   background-color: #F5F6F7;
   padding-top: 80px;
+  position: relative;
 }
 
 .results__title {
@@ -28,6 +29,31 @@
   width: 288px;
   height: 64px;
   margin: 64px auto 80px;
+}
+
+.results__button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.results__not-found-img {}
+
+.results__not-found {
+  font-family: 'Roboto-Slab';
+  font-size: 26px;
+  color: #1A1B22;
+  max-width: 356px;
+  text-align: center;
+  margin: 24px auto 14px;
+}
+
+.results__not-found-text {
+  color: #B6BCBF;
+  font-size: 18px;
+  max-width: 356px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 82px;
 }
 
 @media screen and (max-width: 1250px) {

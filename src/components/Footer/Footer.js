@@ -12,10 +12,10 @@ export default function Footer() {
         <Route>
           <Link className='footer__link' to='/'>Главная</Link>
         </Route>
-        <a href='https://praktikum.yandex.ru/' className='footer__link'>Яндекс.Практикум</a>
+        <a href='https://praktikum.yandex.ru/' className='footer__link' target='_blank' rel='noreferrer'>Яндекс.Практикум</a>
         <div className='footer_social'>
-            <a className='footer__link'><img src={gitIcon} className='footer__img'></img></a>
-            <a className='footer__link'><img src={fbIcon} className='footer__img'></img></a>
+            <a className='footer__link' href='https://github.com/Tartios' target='_blank' rel='noreferrer'><img src={gitIcon} className='footer__img'></img></a>
+            <a className='footer__link' href='https://facebook.com/' target='_blank' rel='noreferrer'><img src={fbIcon} className='footer__img'></img></a>
         </div>
       </nav>
     </footer>

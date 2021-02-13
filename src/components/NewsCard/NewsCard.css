@@ -68,8 +68,10 @@
   font-size: 14px;
 }
 
-.card__tags {
+.card__tag-name {
   align-items: center;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .card__save-button {

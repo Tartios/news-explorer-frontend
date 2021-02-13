@@ -43,7 +43,7 @@ export default function NewsCard({ card, location }) {
             </div>
           {location.pathname === '/' ? <button type='submit' className={`card__save-button ${isSaved}`} onClick={handleSaveNews} onMouseEnter={handleHoverOnButton} onMouseLeave={handleHoverOnButtonLeave} /> : <button type='submit' className='card__delete-button'></button>}
           <div className='card__info'>
-              {location.pathname === '/saved-news' ? <div className='card__tag'><p className='card__tags'>{card.tag}</p></div> : ''}
+              {location.pathname === '/saved-news' ? <div className='card__tag'><p className='card__tag-name'>{card.tag}</p></div> : ''}
               <p className='card__date'>{card.date}</p>
               <h3 className='card__title'>{card.title}</h3>
               <p className='card__text'>{textLength(card.text)}</p>

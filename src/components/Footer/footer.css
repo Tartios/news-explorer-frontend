@@ -27,6 +27,10 @@
   margin: 21px 0 21px 20px;
 }
 
+.footer__img:hover {
+  background-color: #347EFF;
+}
+
 @media screen and (max-width: 708px) {
   .footer {
     display: flex;

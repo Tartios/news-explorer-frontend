@@ -13,7 +13,7 @@ export default function Main({ location }) {
             <p className='searchService__text'>Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
             <form className='searchForm'>
               <input className='searchForm__inputBar' placeholder='Введите тему новости'></input>
-              <button className='searchForm__button'>Искать</button>
+              <button type='submit' className='searchForm__button'>Искать</button>
             </form>
           </div>
         </section>

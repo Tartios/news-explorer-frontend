@@ -21,7 +21,6 @@
 }
 
 .savedNews__categories-info {
-  display: flex;
   line-height: 24px;
   color: #1a1b22;
 }
@@ -38,8 +37,18 @@
   .savedNews {
     font-size: 14px;
   }
+  .savedNews__info {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .savedNews {
+    font-size: 18px;
+    margin: 8px auto 32px;
+  }
   .savedNews__title {
-    font-size: 14px;
+    font-size: 12px;
   }
   .savedNews__info {
     font-size: 30px;
