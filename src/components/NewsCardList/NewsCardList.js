@@ -8,9 +8,9 @@ export default function NewsCardList({
   cards, onSaveClick, isSave, location,
 }) {
   const [count, setCount] = React.useState(3);
-  const arrCards = null;
+  // const arrCards = null;
   // const arrCards = 0;
-  // const arrCards = cards;
+  const arrCards = cards;
 
   function seeMore() {
     setCount(count + 3);

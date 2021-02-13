@@ -121,9 +121,11 @@
     height: auto;
   }
   .searchForm__inputBar {
-    width: 282px;
+    width: 242px;
     border: 1px solid #d1d2d6;
     margin: 0 auto 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .searchForm__button {
     width: 288px;
