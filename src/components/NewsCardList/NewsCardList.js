@@ -1,15 +1,16 @@
 import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
-import './NewsCardList.css';
+import './newsCardList.css';
 import notFoundRes from '../../images/not-found-res.svg';
+// import Preloader from '../Preloader/Preloader';
 
 export default function NewsCardList({
   cards, onSaveClick, isSave, location,
 }) {
   const [count, setCount] = React.useState(3);
-  // const arrCards = null;
+  const arrCards = null;
   // const arrCards = 0;
-  const arrCards = cards;
+  // const arrCards = cards;
 
   function seeMore() {
     setCount(count + 3);
@@ -38,8 +39,12 @@ export default function NewsCardList({
       </section>
     );
   }
+
   return (
     <div>
+      {/* <section className='results'>
+        <Preloader />
+      </section> */}
       {renderContent()}
     </div>
   );

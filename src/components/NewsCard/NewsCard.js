@@ -4,7 +4,6 @@ import './newsCard.css';
 export default function NewsCard({ card, location }) {
   const [hoverOnButton, setHoverOnButton] = React.useState(false);
   const [isSave, setSave] = React.useState(false);
-  // console.log(card);
   function handleSaveNews() {
     setSave(true);
   }

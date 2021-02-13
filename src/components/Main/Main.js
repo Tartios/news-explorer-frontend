@@ -3,8 +3,18 @@ import './main.css';
 import About from '../About/About';
 import NewsCardList from '../NewsCardList/NewsCardList';
 import newsCards from '../../NewsCards/newsCards';
+// import Preloader from '../Preloader/Preloader';
 
 export default function Main({ location }) {
+  // function removePreloader() {
+
+  // }
+  // function handlePreloader() {
+  //   {Preloader}
+  //   setTimeout(() => {
+  //     removePreloader();
+  //   }, 3000);
+  // }
   return (
     <main>
         <section className='searchService'>
