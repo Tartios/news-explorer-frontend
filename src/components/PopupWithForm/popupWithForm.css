@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 450px) {
   .popup__save-button {
-      max-width: 250px;
+      max-width: 288px;
       margin: 0 25px;
   }
 }
@@ -97,8 +97,8 @@
 
 @media screen and (max-width: 450px) {
   .popup__input {
-      max-width: 250px;
-      margin: 0 auto 0 22px;
+      max-width: 288px;
+      margin: 0 auto 23px;
       justify-content: center;
   }
 }
@@ -124,17 +124,10 @@
 .popup__title {
   font-weight: 900;
   font-size: 24px;
-  margin: 34px auto 32px;
-  width: 358px;
+  margin: 34px auto 32px 36px;
+  width: auto;
   text-align: left;
   color: #1A1B22;
-}
-
-@media screen and (max-width: 450px) {
-  .popup__title {
-      margin: 34px auto;
-      text-align: center;
-  }
 }
 
 .popup__message {
@@ -156,4 +149,17 @@
   color: #2F71E5;
   font-size: 12px;
   margin: 0 auto 8px 0;
+}
+
+@media screen and (max-width: 450px) {
+  .popup__container {
+    width: 320px;
+  }
+  .popup__title {
+    margin: 16px auto 22px 17px;
+    width: auto;
+  }
+  .popup__input-title {
+    margin: 0 auto 8px 16px;
+  }
 }
