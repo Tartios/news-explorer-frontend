@@ -29,8 +29,6 @@ export default function NewsCard({ card, location }) {
       }
       return 70;
     };
-    size();
-    console.log(size());
     if (text.length > size()) {
       let i = text.slice(0, size());
       i += end;

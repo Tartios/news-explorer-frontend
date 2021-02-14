@@ -21,20 +21,22 @@ export default function PopupSignIn({ isOpen, onClose }) {
       <input
         name="email"
         type="text"
+        id="email-input"
         className="popup__input popup__input_name"
         placeholder='Введите почту'
         required
       />
-      <span className="popup__input-error"></span>
+      <span id="email-input-error" className="popup__input-error"></span>
       <h4 className='popup__input-title'>Пароль</h4>
       <input
         name="password"
         type="text"
+        id="password-input"
         className="popup__input popup__input_prof"
         placeholder='Введите пароль'
         required
       />
-      <span className="popup__input-error"></span>
+      <span id="password-input-error" className="popup__input-error"></span>
     </PopupWithForm>
   );
 }

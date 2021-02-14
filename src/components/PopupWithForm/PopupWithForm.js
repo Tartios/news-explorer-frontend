@@ -11,8 +11,13 @@ export default function PopupWithForm({
   onSubmit,
   linkText,
 }) {
+  function click(e) {
+    if (e.target === document.getElementById('overlay')) {
+      onClose();
+    }
+  }
   return (
-    <div className={`popup popup_type_${name} ${isOpen && 'popup_open'} `}>
+    <div onClick={click} id='overlay' className={`popup popup_type_${name} ${isOpen && 'popup_open'} `}>
       <div className='popup__container'>
         <button
           type='button'

@@ -37,8 +37,14 @@ function App() {
     setPopupSuccessfulyOpen(false);
   }
 
+  function escForClosePopups(event) {
+    if (event.keyCode === 27) {
+      colseAllPopups();
+    }
+  }
+
   return (
-    <div className="App">
+    <div onKeyDown={escForClosePopups} className="App">
       <PopupSignIn isOpen={isSignInOpen} onClose={colseAllPopups} onSignUp={handleSignUpOpen} onSuccessfuly={handleSuccessfulyOpen}/>
       <PopupSignUp isOpen={isSignUpOpen} onClose={colseAllPopups} onSignIn={handleSignInOpen}/>
       <PopupSuccessfuly isOpen={isPopupSuccessfulyOpen} onClose={colseAllPopups} />
