@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+button:focus {
+  outline: none;
+}
