@@ -2,10 +2,10 @@ import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
 import './NewsCardList.css';
 import notFoundRes from '../../images/not-found-res.svg';
-// import Preloader from '../Preloader/Preloader';
+import Preloader from '../Preloader/Preloader';
 
 export default function NewsCardList({
-  cards, onSaveClick, isSave, location,
+  cards, onSaveClick, isSave, location, newsLoading,
 }) {
   const [count, setCount] = React.useState(3);
   // const arrCards = null;
@@ -42,9 +42,9 @@ export default function NewsCardList({
 
   return (
     <div>
-      {/* <section className='results'>
+      {newsLoading ? <section className='results'>
         <Preloader />
-      </section> */}
+      </section> : null}
       {renderContent()}
     </div>
   );

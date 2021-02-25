@@ -143,6 +143,11 @@
   color: #2F71E5;
 }
 
+.popup__redirect:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+
 .popup__input-title {
   font-family: 'Inter';
   font-weight: 400;

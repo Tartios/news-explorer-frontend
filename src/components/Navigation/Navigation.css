@@ -48,7 +48,8 @@
   height: 48px;
 }
 
-.nav__button_authorization {
+.nav__button_alternative {
+  font-weight: 500;
   border: 1px solid #000;
   box-sizing: border-box;
   border-radius: 100px;
