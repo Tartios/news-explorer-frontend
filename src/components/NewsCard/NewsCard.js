@@ -93,7 +93,7 @@ export default function NewsCard({
 
   return (
       <div className='card'>
-          <a src={link}>
+          <a src={link} className='card__link'>
             <img className='card__image' src={image} alt='фото статьи' />
           </a>
           <div className={`card__info-window ${hoverOnSavebutton}`}>
@@ -103,9 +103,7 @@ export default function NewsCard({
           <div className='card__info'>
             {location.pathname === '/saved-news' ? <div className='card__tag'><p className='card__tag-name'>{keyword}</p></div> : null}
             <p className='card__date'>{dateFormat(date)}</p>
-            <a src={link}>
-              <h3 className='card__title'>{title}</h3>
-            </a>
+            <h3 className='card__title'>{title}</h3>
             <p id='text-container' className='card__text'>{textLength(text)}</p>
             <p className='card__source'>{source}</p>
           </div>
