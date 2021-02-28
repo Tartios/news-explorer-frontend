@@ -1,0 +1,106 @@
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  line-height: 24px;
+  margin-left: 34px;
+}
+
+.nav__link_alternative {
+  text-decoration: none;
+  color: #000;
+  line-height: 24px;
+  margin-left: 34px;
+}
+
+.nav__link_active {
+  bottom: 0;
+  border-bottom: 3px solid #fff;
+}
+
+.nav__link_active-save {
+  bottom: 0;
+  border-bottom: 3px solid #000;
+}
+
+.nav {
+  display: flex;
+  height: 80px;
+  font-size: 18px;
+}
+
+.nav__link-name {
+  font-weight: 500;
+  margin-top: 30px;
+  text-align: center;
+  align-content: center;
+}
+.nav__button {
+  font-weight: 500;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 0.5em 1.1em;
+  cursor: pointer;
+  line-height: 24px;
+  color: #fff;
+  background-color: transparent;
+  margin: auto 104px auto 32px;
+  height: 48px;
+}
+
+.nav__button_alternative {
+  font-weight: 500;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 100px;
+  padding: 0.5em 1.1em;
+  cursor: pointer;
+  color: #000;
+  background-color: transparent;
+  margin: auto 104px auto 32px;
+  height: 48px;
+}
+
+.nav__exit-button {
+  margin: auto auto auto 10px;
+  width: 22px;
+}
+
+@media screen and (max-width: 953px) {
+  .nav {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 795px) {
+  .nav {
+    visibility: hidden;
+    flex-direction: column;
+    font-size: 18px;
+    position: absolute;
+    height: 230px;
+    top: 72px;
+    background-color: #1A1B22;
+    width: 100%;
+    border-top: 1px solid #c4c4c4;
+  }
+  .nav_visible {
+    visibility: visible;
+  }
+  .nav__link-name {
+    margin: 0;
+    text-align: start;
+  }
+  .nav__link {
+    margin-left: 16px;
+    margin-bottom: 20px;
+    margin-top: 24px;
+  }
+  .nav__link_active {
+    border: none;
+  }
+  .nav__button {
+    width: 288px;
+    margin: 24px auto 24px;
+  }
+}
