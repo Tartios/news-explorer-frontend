@@ -192,7 +192,6 @@ function App() {
       .deleteArticle(id)
       .then(() => {
         const articles = savedArticles.filter((article) => article._id !== id);
-        console.log(articles);
         setSavedArticles(articles);
         const articleInStorage = articlesData.map((item) => {
           const i = item;
