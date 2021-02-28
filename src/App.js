@@ -36,10 +36,6 @@ function App() {
       .catch(Error);
   }
 
-  useEffect(() => {
-    getSavedArticles();
-  }, []);
-
   function closeAllPopups() {
     setSignInOpen(false);
     setSignUpOpen(false);
@@ -182,10 +178,8 @@ function App() {
         }
         return item;
       });
-      console.log(savedArticle);
       setSavedArticles(savedArticles);
       setArticlesData(savedArticle);
-      console.log(articlesData);
       localStorage.setItem('articles', JSON.stringify(savedArticle));
     })
       .catch((err) => {
@@ -197,7 +191,8 @@ function App() {
     mainApi
       .deleteArticle(id)
       .then(() => {
-        const articles = savedArticles.filter((article) => article._id !== savedArticles._id);
+        const articles = savedArticles.filter((article) => article._id !== id);
+        console.log(articles);
         setSavedArticles(articles);
         const articleInStorage = articlesData.map((item) => {
           const i = item;
@@ -246,6 +241,10 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
+  }, []);
+
+  useEffect(() => {
+    getSavedArticles();
   }, []);
 
   return (
