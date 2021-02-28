@@ -60,6 +60,10 @@
   line-height: 24px;
   margin: 8px auto 16px;
 }
+.popup__save-button:disabled {
+  background-color: #E6E8EB;
+  color: #B6BCBF;
+}
 
 @media screen and (max-width: 450px) {
   .popup__save-button {

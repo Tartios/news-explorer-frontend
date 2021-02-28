@@ -4,63 +4,9 @@ import { useFormWithValidation } from '../FormValidation/FormValidation';
 export default function Register({
   handleRegister, isOpen, onClose, openSignIn,
 }) {
-  // const { values, handleChange, setValues } = useForm();
   const {
     values, handleChange, errors, isValid, resetForm,
   } = useFormWithValidation();
-  // const [data, setData] = React.useState({
-  //   name: '',
-  //   email: '',
-  //   password: '',
-  // });
-  // const [errors, setErrors] = React.useState(null);
-  // const [isValid, setIsValid] = React.useState(false);
-  // const [passwordError, setPasswordError] = React.useState(null);
-  // const [nameError, setNameError] = React.useState(null);
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setData({
-  //     ...data,
-  //     [name]: value,
-  //   });
-
-  //   // console.log(e.target.name);
-  //   // switch (name) {
-  //   //   case 'email':
-  //   //     // eslint-disable-next-line no-case-declarations
-  //   //     const emailIsValid = /^.+@.+\..+$/igm;
-  //   //     if (!emailIsValid.test(String(value).toLowerCase())) {
-  //   //       setErrors('некорректный email');
-  //   //       console.log(errors);
-  //   //     } else {
-  //   //       setErrors(null);
-  //   //     }
-  //   //     // break;
-  //   //   case 'password':
-  //   //     if (value < 8) {
-  //   //       setPasswordError('Длина пароля должна быть не менее 8-ми символов');
-  //   //       console.log(errors);
-  //   //     } else {
-  //   //       setPasswordError(null);
-  //   //     }
-  //   //     // break;
-  //   //   case 'name':
-  //   //     if (value < 2) {
-  //   //       setNameError('Длина имени должна быть не менее 2-х символов');
-  //   //       console.log(errors);
-  //   //     }
-  //   //     if (value > 30) {
-  //   //       setNameError('Максимальная длина имени 30 символов');
-  //   //     } else {
-  //   //       setNameError(null);
-  //   //     }
-  //   //     // break;
-  //   //   default:
-  //   //     setIsValid(true);
-  //   // }
-  //   // console.log(errors);
-  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -118,7 +64,7 @@ export default function Register({
         required
       />
       <span id="name-input-error" className="popup__input-error">{errors.name}</span>
-    <button type='submit' className='popup__save-button' disabled={isValid}>Зарегистрироваться</button>
+    <button type='submit' className='popup__save-button' disabled={!isValid}>Зарегистрироваться</button>
       </form>
       <p className='popup__message'>или <a className='popup__redirect' onClick={openSignIn}>Войти</a></p>
     </div>

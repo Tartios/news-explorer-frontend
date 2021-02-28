@@ -29,7 +29,6 @@ class NewsApi {
 
 const newsApi = new NewsApi({
   url: 'https://nomoreparties.co/news/v2/everything?',
-  // `${window.location.protocol}${process.env.REACT_APP_API_URL || '//localhost:3002'}`,
 });
 
 export default newsApi;
