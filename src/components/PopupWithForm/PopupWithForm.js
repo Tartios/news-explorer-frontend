@@ -10,6 +10,8 @@ export default function PopupWithForm({
   buttonText,
   onSubmit,
   linkText,
+  onSignUp,
+  onSignIn,
 }) {
   function click(e) {
     if (e.target === document.getElementById('overlay')) {
@@ -25,13 +27,13 @@ export default function PopupWithForm({
           className='popup__close-button'
         ></button>
         <h3 className='popup__title'>{title}</h3>{' '}
-        <form action='#' className='popup__form' onSubmit={onSubmit} noValidate>
+        <form action='#' className='popup__form' onSubmit={onSubmit}>
           {children}
           <button type='submit' className='popup__save-button'>
             {buttonText}
           </button>
         </form>
-        <p className='popup__message'>или <a className='popup__redirect'>{linkText}</a></p>
+        <p className='popup__message'>или <button className='popup__redirect' onClick={`${linkText === 'Зарегистрироваться'} ? ${onSignUp} : ${onSignIn}`}>{linkText}</button></p>
       </div>
     </div>
   );

@@ -2,13 +2,14 @@
   max-width: 400px;
   max-height: 576px;
   position: relative;
-  border-radius: 16%;
 }
 
 .card__image {
   height: 272px;
   width: 400px;
-  object-fit: contain;
+  object-fit: cover;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
 }
 
 .card__info {
@@ -18,6 +19,8 @@
   color: #1A1B22;
   background-color: white;
   height: 304px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 .card__date {
@@ -145,6 +148,20 @@
 
 .card__info-window-title_isTrue {
   display: inline;
+}
+
+.card__link {
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  align-items: center;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 1250px) {

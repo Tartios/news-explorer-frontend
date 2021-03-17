@@ -60,6 +60,10 @@
   line-height: 24px;
   margin: 8px auto 16px;
 }
+.popup__save-button:disabled {
+  background-color: #E6E8EB;
+  color: #B6BCBF;
+}
 
 @media screen and (max-width: 450px) {
   .popup__save-button {
@@ -93,6 +97,7 @@
   font-size: 14px;
   font-family: 'Inter';
   font-weight: 400;
+  outline: none;
 }
 
 @media screen and (max-width: 450px) {
@@ -108,7 +113,7 @@
 }
 
 .popup__input-error {
-  padding-left: 36px;
+  max-width: 360px;
   font-size: 12px;
   color: red;
 }
@@ -141,6 +146,11 @@
   font-family: 'Inter';
   font-weight: 700;
   color: #2F71E5;
+}
+
+.popup__redirect:hover {
+  cursor: pointer;
+  opacity: .5;
 }
 
 .popup__input-title {

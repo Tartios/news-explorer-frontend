@@ -29,7 +29,6 @@
   font-size: 18px;
   line-height: 24px;
   max-width: 545px;
-  /* width возможно не нужно? проверить после всей верстки и импорта шрифтов */
 }
 
 .searchForm {
@@ -51,6 +50,7 @@
   height: 62px;
   vertical-align: middle;
   font-size: 16px;
+  outline: none;
 }
 
 .searchForm__button {

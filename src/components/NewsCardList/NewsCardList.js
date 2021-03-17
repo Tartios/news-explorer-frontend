@@ -2,25 +2,27 @@ import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
 import './NewsCardList.css';
 import notFoundRes from '../../images/not-found-res.svg';
-// import Preloader from '../Preloader/Preloader';
+import Preloader from '../Preloader/Preloader';
 
 export default function NewsCardList({
-  cards, onSaveClick, isSave, location,
+  cards,
+  onSaveClick,
+  toSaved,
+  location,
+  newsLoading,
+  isLogged,
+  deleteArticle,
 }) {
   const [count, setCount] = React.useState(3);
-  // const arrCards = null;
-  // const arrCards = 0;
-  const arrCards = cards;
-
   function seeMore() {
     setCount(count + 3);
   }
 
-  function renderContent() {
-    if (arrCards === null) {
+  function renderContent(cardArray) {
+    if (cardArray === null) {
       return null;
     }
-    if (arrCards === 0) {
+    if (cardArray.length === 0) {
       return (
         <section className='results'>
           <img src={notFoundRes} className='results__not-found-img' alt='Ничего не найдено :(' />
@@ -33,19 +35,19 @@ export default function NewsCardList({
       <section className='results'>
         <h2 className='results__title'>Результаты поиска</h2>
         <div className='results__cards'>
-        {cards.slice(0, count).map((card) => <NewsCard card={card} onSaveClick={onSaveClick} key={card.title} isSave={isSave} location={location} />)}
+        {cardArray.slice(0, count).map((card) => <NewsCard card={card} onSaveClick={onSaveClick} key={card.url} toSaved={toSaved} location={location} isLogged={isLogged} deleteArticle={deleteArticle} />)}
         </div>
-        <button className='results__button' onClick={seeMore}>Показать еще</button>
+        {count !== cards.length && count < cards.length ? <button className='results__button' onClick={seeMore}>Показать еще</button> : null}
       </section>
     );
   }
 
   return (
     <div>
-      {/* <section className='results'>
+      {newsLoading ? <section className='results'>
         <Preloader />
-      </section> */}
-      {renderContent()}
+      </section> : null}
+      {renderContent(cards)}
     </div>
   );
 }

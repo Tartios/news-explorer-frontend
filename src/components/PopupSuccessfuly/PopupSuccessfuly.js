@@ -6,6 +6,7 @@ export default function PopupSuccessfuly({
   name,
   isOpen,
   onClose,
+  openSignIn,
 }) {
   return (
     <div className={`popup popup_type_${name} ${isOpen && 'popup_open'} `}>
@@ -16,7 +17,7 @@ export default function PopupSuccessfuly({
           className='popup__close-button'
         ></button>
         <h3 className='popup__title popup__title_success'>Пользователь успешно зарегистрирован!</h3>
-        <a className='popup__success'>Войти</a>
+        <a className='popup__success' onClick={openSignIn}>Войти</a>
       </div>
     </div>
   );

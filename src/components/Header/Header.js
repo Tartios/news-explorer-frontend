@@ -3,7 +3,9 @@ import './header.css';
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 
-export default function Header({ onSignIn, location }) {
+export default function Header({
+  onSignIn, location, isLogged, logOut,
+}) {
   const [navState, setNavState] = React.useState(false);
   function handleOpenNav() {
     if (navState) {
@@ -19,7 +21,7 @@ export default function Header({ onSignIn, location }) {
     <header className={location.pathname === '/' ? `header ${navIsOpen}` : `header__alternative ${navIsOpen}`}>
         <Link className={location.pathname === '/' ? 'header__logo' : 'header__logo_alternative'} to='/ ' />
         <button className={location.pathname === '/' ? `header__burger-button ${burgerButtonPush}` : `header__burger-button ${burgerButtonPush} header__burger-button-alt`} onClick={handleOpenNav} />
-        <Navigation onSignIn={onSignIn} location={location} openNav={navIsOpen} />
+        <Navigation onSignIn={onSignIn} location={location} openNav={navIsOpen} isLogged={isLogged} logOut={logOut} />
     </header>
   );
 }
