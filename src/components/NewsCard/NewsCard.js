@@ -91,6 +91,23 @@ export default function NewsCard({
     return textInArticle;
   }
 
+  function renderButton() {
+    console.log('hey');
+    if (location.pathname === '/') {
+      return (
+        <button type='submit' className={`card__save-button ${isSaved}`}
+        onClick={isLogged ? handleSaveArticle : null}
+        onMouseEnter={isLogged ? null : handleHoverOnButton}
+        onMouseLeave={isLogged ? null : handleHoverOnButtonLeave} />
+      );
+    }
+    return (
+      <button type='submit' className='card__delete-button'
+      onClick={isLogged ? handleDeleteArticle : null} onMouseEnter={handleHoverOnButton}
+      onMouseLeave={handleHoverOnButtonLeave}></button>
+    );
+  }
+
   return (
       <div className='card'>
           <a src={link} className='card__link'>
@@ -99,7 +116,7 @@ export default function NewsCard({
           <div className={`card__info-window ${hoverOnSavebutton}`}>
             {location.pathname === '/' ? <p className='card__info-window-title'>Войдите, чтобы сохранять статьи</p> : <p className='card__info-window-title'>Убрать из сохраненных</p>}
           </div>
-            {location.pathname === '/' ? <button type='submit' className={`card__save-button ${isSaved}`} onClick={isLogged ? handleSaveArticle : null} onMouseEnter={isLogged ? null : handleHoverOnButton} onMouseLeave={isLogged ? null : handleHoverOnButtonLeave} /> : <button type='submit' className='card__delete-button' onClick={isLogged ? handleDeleteArticle : null} onMouseEnter={handleHoverOnButton} onMouseLeave={handleHoverOnButtonLeave}></button>}
+            {renderButton()}
           <div className='card__info'>
             {location.pathname === '/saved-news' ? <div className='card__tag'><p className='card__tag-name'>{keyword}</p></div> : null}
             <p className='card__date'>{dateFormat(date)}</p>
